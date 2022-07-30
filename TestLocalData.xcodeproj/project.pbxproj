@@ -11,6 +11,9 @@
 		C426A4732879C22600888C85 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C426A4722879C22600888C85 /* ContentView.swift */; };
 		C426A4752879C22900888C85 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C426A4742879C22900888C85 /* Assets.xcassets */; };
 		C426A4782879C22900888C85 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C426A4772879C22900888C85 /* Preview Assets.xcassets */; };
+		C426A4832879D05B00888C85 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = C426A4822879D05B00888C85 /* Model.swift */; };
+		C426A486287B3E7A00888C85 /* RNCryptor in Frameworks */ = {isa = PBXBuildFile; productRef = C426A485287B3E7A00888C85 /* RNCryptor */; };
+		C426A489287B6C8000888C85 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C426A488287B6C8000888C85 /* HomeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +22,8 @@
 		C426A4722879C22600888C85 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C426A4742879C22900888C85 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C426A4772879C22900888C85 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C426A4822879D05B00888C85 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		C426A488287B6C8000888C85 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +31,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C426A486287B3E7A00888C85 /* RNCryptor in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,6 +57,8 @@
 		C426A46F2879C22600888C85 /* TestLocalData */ = {
 			isa = PBXGroup;
 			children = (
+				C426A487287B3F3A00888C85 /* ViewModel */,
+				C426A4802879D03000888C85 /* DataModel */,
 				C426A4702879C22600888C85 /* TestLocalDataApp.swift */,
 				C426A4722879C22600888C85 /* ContentView.swift */,
 				C426A4742879C22900888C85 /* Assets.xcassets */,
@@ -65,6 +73,22 @@
 				C426A4772879C22900888C85 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		C426A4802879D03000888C85 /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				C426A4822879D05B00888C85 /* Model.swift */,
+			);
+			path = DataModel;
+			sourceTree = "<group>";
+		};
+		C426A487287B3F3A00888C85 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C426A488287B6C8000888C85 /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +107,9 @@
 			dependencies = (
 			);
 			name = TestLocalData;
+			packageProductDependencies = (
+				C426A485287B3E7A00888C85 /* RNCryptor */,
+			);
 			productName = TestLocalData;
 			productReference = C426A46D2879C22600888C85 /* TestLocalData.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +138,9 @@
 				Base,
 			);
 			mainGroup = C426A4642879C22600888C85;
+			packageReferences = (
+				C426A484287B3E7A00888C85 /* XCRemoteSwiftPackageReference "RNCryptor" */,
+			);
 			productRefGroup = C426A46E2879C22600888C85 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,8 +167,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C426A4832879D05B00888C85 /* Model.swift in Sources */,
 				C426A4732879C22600888C85 /* ContentView.swift in Sources */,
 				C426A4712879C22600888C85 /* TestLocalDataApp.swift in Sources */,
+				C426A489287B6C8000888C85 /* HomeViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +371,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C426A484287B3E7A00888C85 /* XCRemoteSwiftPackageReference "RNCryptor" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RNCryptor/RNCryptor.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C426A485287B3E7A00888C85 /* RNCryptor */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C426A484287B3E7A00888C85 /* XCRemoteSwiftPackageReference "RNCryptor" */;
+			productName = RNCryptor;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C426A4652879C22600888C85 /* Project object */;
 }
